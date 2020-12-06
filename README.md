@@ -7,3 +7,4 @@ A different language every day!
 - Day 3: Grasshopper
 - Day 4: Pascal
 - Day 5: Excel
+- Day 6: C
