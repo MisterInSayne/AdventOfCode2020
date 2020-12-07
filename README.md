@@ -8,3 +8,4 @@ A different language every day!
 - Day 4: Pascal
 - Day 5: Excel
 - Day 6: C
+- Day 7: Haxe
