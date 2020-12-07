@@ -42,7 +42,7 @@ class Bag {
     public var inBags:Array<Bag> = [];
     public var hasBags:Array<Bag> = [];
     public var Amount:Array<Int> = [];
-    public var counted = false;
+    private var counted = false;
     
     public function getCountPt1(){
         if(this.counted) return 0;
