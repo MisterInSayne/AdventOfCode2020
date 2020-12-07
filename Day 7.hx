@@ -16,7 +16,6 @@ class Day7 {
                     }else{
                         var name = r.matched(1);
                         var content = r.matched(2);
-                        var has:Array<String> = [];
                         if(!Bags.exists(name))Bags[name] = new Bag();
                         while(rc.match(content)){
                             if(!Bags.exists(rc.matched(2)))Bags[rc.matched(2)] = new Bag();
