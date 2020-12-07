@@ -3,13 +3,11 @@ class Day7 {
     static public function main():Void {
         var Bags:Map<String,Bag> = new Map<String,Bag>();
         var line:String;
-        var lines:Array<String> = [];
         var r = ~/^(.+?) bags contain ([^\.\n]+?)\.$/g;
         var rc = ~/(\d+?) ([^,\.\n]+?) bags?/g;
         try {
             while (true) {
                 line = Sys.stdin().readLine();
-                lines.push(line);
                 if(r.match(line)){
                     if(r.matched(2) == "no other bags"){
                         // Dead end.
