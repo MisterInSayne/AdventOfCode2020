@@ -9,3 +9,4 @@ A different language every day!
 - Day 5: Excel
 - Day 6: C
 - Day 7: Haxe
+- Day 8: Assembly (NAMS)
