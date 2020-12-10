@@ -1,4 +1,4 @@
-program Day4;
+program Day_04;
 uses
     Classes, SysUtils;
 var
