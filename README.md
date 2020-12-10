@@ -11,3 +11,4 @@ A different language every day!
 - Day 7: Haxe
 - Day 8: Assembly (NAMS)
 - Day 9: Php
+- Day 10: Bash
