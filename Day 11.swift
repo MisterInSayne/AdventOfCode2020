@@ -84,7 +84,7 @@ class SeatManager{
     var Cycle = 0
     var Silent = false;
     var chairs = 0
-    var Part=1
+    var Part=1 //The part of the puzzle you want the answer for
     
     func addSeat(c: Character, x: Int, y: Int){
         if(c == "."){
@@ -198,7 +198,7 @@ while let line = readLine() {
 //print("Total positions:",String(Seats.Seats.count))
 //Seats.outputSeats()
 
-Seats.Part = 2
+Seats.Part = 2 //The part of the puzzle you want the answer for
 //Seats.stepUntilDone(max:10)
 Seats.Silent = true
 Seats.stepUntilDone()
