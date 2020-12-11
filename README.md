@@ -12,3 +12,4 @@ A different language every day!
 - Day 8: Assembly (NAMS)
 - Day 9: Php
 - Day 10: Bash
+- Day 11: Swift
