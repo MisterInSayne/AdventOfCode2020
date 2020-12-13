@@ -13,3 +13,4 @@ A different language every day!
 - Day 9: Php
 - Day 10: Bash
 - Day 11: Swift
+- Day 12: Haskell
