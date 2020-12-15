@@ -14,3 +14,4 @@ A different language every day!
 - Day 10: Bash
 - Day 11: Swift
 - Day 12: Haskell
+- Day 13: APL
