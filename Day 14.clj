@@ -11,20 +11,18 @@
 	(def in (re-matches #"(\w+)(?:\[(\d+)\])? \= (.+)" ln))
 	(if(=(nth in 1) "mask")
 		(do
-            (def mask (char-index-map (nth in 3)))
-            (def xs (count (mask \X)))
+			(def mask (char-index-map (nth in 3)))
+			(def xs (count (mask \X)))
 		)
 		(do
-		    (def addr (Integer/parseInt (nth in 2)))
-		    (def nr (Integer/parseInt (nth in 3)))
-		    
-		    (def oneset (reduce (fn [acc p] (bit-set acc p)) addr (mask \1)))
-		    
-		    (doseq [i (range (exp 2 xs))] (def smem (assoc smem (setbit oneset i) nr)))
-			
-            (def mem (assoc mem addr (reduce (fn [acc [k v]] 
-		            (reduce (fn [acc p] (if(= k \1) (bit-set acc p) (bit-clear acc p) )) acc v)
-                ) nr mask)))
+			(def addr (Integer/parseInt (nth in 2)))
+			(def nr (Integer/parseInt (nth in 3)))
+
+			(def oneset (reduce (fn [acc p] (bit-set acc p)) addr (mask \1)))
+
+			(doseq [i (range (exp 2 xs))] (def smem (assoc smem (setbit oneset i) nr)))
+
+			(def mem (assoc mem addr (reduce (fn [acc [k v]] (reduce (fn [acc p] (if(= k \1) (bit-set acc p) (bit-clear acc p) )) acc v)) nr mask)))
 		)
 	)
 )
