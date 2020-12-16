@@ -22,7 +22,7 @@
 
 			(doseq [i (range (exp 2 xs))] (def smem (assoc smem (setbit oneset i) nr)))
 
-			(def mem (assoc mem addr (reduce (fn [acc [k v]] (reduce (fn [acc p] (if(= k \1) (bit-set acc p) (bit-clear acc p) )) acc v)) nr mask)))
+			(def mem (assoc mem addr (reduce (fn [acc [k v]] (reduce (fn [acc p] (if(= k \1) (bit-set acc p) (bit-clear acc p) )) acc v)) nr (dissoc mask \X))))
 		)
 	)
 )
