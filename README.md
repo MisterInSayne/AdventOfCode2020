@@ -16,3 +16,4 @@ A different language every day!
 - Day 12: Haskell
 - Day 13: APL
 - Day 14: Clojure
+- Day 15: Lua
