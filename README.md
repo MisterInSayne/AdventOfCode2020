@@ -15,3 +15,4 @@ A different language every day!
 - Day 11: Swift
 - Day 12: Haskell
 - Day 13: APL
+- Day 14: Clojure
