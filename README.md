@@ -18,3 +18,4 @@ A different language every day!
 - Day 14: Clojure
 - Day 15: Lua
 - Day 16: Rust
+- Day 17: Ruby
