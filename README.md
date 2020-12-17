@@ -17,3 +17,4 @@ A different language every day!
 - Day 13: APL
 - Day 14: Clojure
 - Day 15: Lua
+- Day 16: Rust
