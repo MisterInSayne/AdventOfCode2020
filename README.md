@@ -19,3 +19,4 @@ A different language every day!
 - Day 15: Lua
 - Day 16: Rust
 - Day 17: Ruby
+- Day 18: Batch
