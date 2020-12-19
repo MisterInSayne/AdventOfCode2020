@@ -20,3 +20,4 @@ A different language every day!
 - Day 16: Rust
 - Day 17: Ruby
 - Day 18: Batch
+- Day 19: Go
