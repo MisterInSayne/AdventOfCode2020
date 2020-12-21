@@ -1,44 +1,10 @@
 var textDump = `insert data here`;
-
-
-
-var regex = /^(\d+)\-(\d+) (\w)\: (.*)$/gm;
-
-var result = [...textDump.matchAll(regex)];
-var count = 0;
-
-for(var res of result){
-    var min = res[1];
-    var max = res[2];
-    var letter = res[3];
-    var pass = res[4];
-    
+var answerA = 0; var answerB = 0;
+for(var res of [...textDump.matchAll(/^(\d+)\-(\d+) (\w)\: (.*)$/gm)]){
     var c = 0;
-    for (var l of pass){
-        if(l == letter)c++;
-    }
-    if(c >= min && c <= max) count++;
-    
+    for (var l of res[4]){ if(l == res[3])c++;}
+    if(c >= res[1] && c <= res[2]) answerA++;
+    if((res[4].charAt(res[1]-1) == res[3]?1:0) + (res[4].charAt(res[2]-1) == res[3]?1:0) == 1) answerB++;
 }
-console.log(count);
-
-
-//-------------------------[Part 2]-----------------------------
-
-
-
-var regex = /^(\d+)\-(\d+) (\w)\: (.*)$/gm;
-
-var result = [...textDump.matchAll(regex)];
-var count = 0;
-
-for(var res of result){
-    var min = res[1];
-    var max = res[2];
-    var letter = res[3];
-    var pass = res[4];
-    
-    if((pass.charAt(min-1) == letter?1:0) + (pass.charAt(max-1) == letter?1:0) == 1) count++;
-    
-}
-console.log(count);
+console.log("Part 1: "+answerA);
+console.log("Part 2: "+answerB);
