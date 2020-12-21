@@ -22,3 +22,4 @@ A different language every day!
 - Day 18: Batch
 - Day 19: Go
 - Day 20: Typescript
+- Day 21: Raku
