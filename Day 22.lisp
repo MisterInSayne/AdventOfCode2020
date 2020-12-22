@@ -1,6 +1,3 @@
-
-
-
 (defvar player1 nil)
 (defvar player2 nil)
 (defvar _DEBUG nil)
@@ -12,7 +9,6 @@
     ))
 )
 
-
 (defun playgame (p1 p2 nr part)
     (when _DEBUG (princ "--- Start of Game ")(write nr)(princ " ---")(terpri)(terpri))
     (let (
@@ -23,10 +19,10 @@
         (card2 0)
     )
     (loop
-        (incf turn 1)
+        (incf turn)
         (when _DEBUG (princ " -[Round ")(write turn)(princ " of Game ")(write nr)(princ "]-")(terpri))
         (when (= part 2)
-            (when (or (find p1 history1 :test #'equal) (find p2 history2 :test #'equal)) 
+            (when (or (member p1 history1 :test #'equal) (member p2 history2 :test #'equal)) 
                 (when _DEBUG (princ "  Loop detected!")(terpri)(terpri))
                 (return (list 1 p1))
             )
@@ -40,10 +36,10 @@
         (setq p1 (reverse p1))
         (setq p2 (reverse p2))
         (when _DEBUG (princ "  Player 1 plays: ")(write card1)(terpri)(princ "  Player 2 plays: ")(write card2)(terpri))
-        (if (and (= part 2) (>= (length p1) card1) (>= (length p2) card2))
+        (if (and (= part 2) (<= card1 (length p1)) (<= card2 (length p2)))
             (progn 
                 (when _DEBUG (terpri))
-                (if (= 1 (car (playgame p1 p2 (+ nr 1) part)))
+                (if (= 1 (car (playgame (subseq p1 (- (length p1) card1) (length p1)) (subseq p2 (- (length p2) card2) (length p2)) (+ nr 1) part)))
                     (progn (push card1 p1)(push card2 p1)
                         (when _DEBUG (princ "---- End of Subgame ----")(terpri)(terpri)(princ " Player 1 wins round ")(write turn)(princ " of game ")(write nr)(terpri))
                     )
@@ -100,10 +96,8 @@
         (princ "Winner's score: ")(write (countscore (reverse (cadr winnerPart2))))(terpri)(terpri)
     )
     (progn
-        ;(princ "Answer Part1: ")(write (countscore (reverse (cadr (playgame player1 player2 1 1)))))(terpri)
+        (princ "Answer Part1: ")(write (countscore (reverse (cadr (playgame player1 player2 1 1)))))(terpri)
         (princ "Answer Part2: ")(write (countscore (reverse (cadr (playgame player1 player2 1 2)))))(terpri)(terpri)
     )
 )
 )
-
-;10601 too low.
