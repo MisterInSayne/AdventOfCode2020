@@ -12,7 +12,7 @@
     ))
 )
 
-(defvar  loopsafe nil)
+
 (defun playgame (p1 p2 nr part)
     (when _DEBUG (princ "--- Start of Game ")(write nr)(princ " ---")(terpri)(terpri))
     (let (
@@ -24,12 +24,10 @@
     )
     (loop
         (incf turn 1)
-        (when loopsafe (return (list 1 p1)))
         (when _DEBUG (princ " -[Round ")(write turn)(princ " of Game ")(write nr)(princ "]-")(terpri))
         (when (= part 2)
             (when (or (find p1 history1 :test #'equal) (find p2 history2 :test #'equal)) 
                 (when _DEBUG (princ "  Loop detected!")(terpri)(terpri))
-                (setq loopsafe t)
                 (return (list 1 p1))
             )
             (push p1 history1)(push p2 history2)
