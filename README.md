@@ -24,3 +24,4 @@ A different language every day!
 - Day 20: Typescript
 - Day 21: Raku
 - Day 22: Lisp
+- Day 23: C++
