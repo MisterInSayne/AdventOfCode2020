@@ -25,3 +25,4 @@ A different language every day!
 - Day 21: Raku
 - Day 22: Lisp
 - Day 23: C++
+- Day 24: Java
