@@ -26,3 +26,4 @@ A different language every day!
 - Day 22: Common Lisp
 - Day 23: C++
 - Day 24: Java
+- Day 25: C#
